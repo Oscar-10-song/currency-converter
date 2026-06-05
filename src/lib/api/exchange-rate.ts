@@ -16,7 +16,7 @@ import { ExchangeRatesAll, RateHistoryPoint } from '@/types/currency';
  * EXCHANGE_RATE_API_KEY in environment variables and switch provider.
  */
 
-const FRANKFURTER_BASE = 'https://api.frankfurter.dev';
+const FRANKFURTER_BASE = 'https://api.frankfurter.app';
 
 /* -------------------------------------------------------------------------- */
 /*  Public API                                                                */
