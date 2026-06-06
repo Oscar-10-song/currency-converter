@@ -197,4 +197,194 @@ export const ARTICLES: Article[] = [
       { base: 'USD', target: 'CHF' },
     ],
   },
+  {
+    slug: 'usd-to-cny-forecast',
+    title: 'USD to CNY Exchange Rate Forecast 2026',
+    description:
+      'Expert analysis and forecast for the USD to CNY exchange rate in 2026. Key factors affecting the US Dollar to Chinese Yuan pair including trade relations, interest rates, and economic policy.',
+    category: 'analysis',
+    date: now,
+    readingTime: 7,
+    sections: [
+      {
+        heading: 'Current USD to CNY Market Overview',
+        content:
+          'The USD to CNY exchange rate remains one of the most closely watched currency pairs in global markets. As of mid-2026, the pair continues to be influenced by interest rate differentials between the Federal Reserve and the People\'s Bank of China, trade flows between the world\'s two largest economies, and geopolitical developments. Understanding these dynamics is essential for businesses engaged in US-China trade and investors with cross-border exposure.',
+      },
+      {
+        heading: 'Key Factors Influencing USD/CNY in 2026',
+        content:
+          'Several factors are shaping the USD/CNY exchange rate outlook for 2026. The Federal Reserve\'s monetary policy stance continues to drive US Dollar strength or weakness relative to major peers. Meanwhile, China\'s economic recovery trajectory and the People\'s Bank of China\'s approach to currency management play crucial roles. Trade tensions, technology competition, and capital flows between the two economies add additional layers of complexity to the exchange rate dynamics.',
+      },
+      {
+        heading: 'Technical Analysis and Historical Patterns',
+        content:
+          'Historical analysis of the USD/CNY pair shows distinct trading ranges and support/resistance levels. The pair has traded in a broad range over the past decade, with the People\'s Bank of China managing the yuan within a controlled band against a basket of currencies. Technical traders watch key levels for breakouts or reversals that could signal the next major move in the exchange rate.',
+      },
+      {
+        heading: 'Impact on Businesses and Individuals',
+        content:
+          'Fluctuations in the USD/CNY exchange rate have real-world implications for businesses importing from China, Chinese exporters, and individuals sending money between the two countries. A stronger dollar means more yuan for dollar holders, benefiting those sending money to China. Conversely, a weaker dollar makes Chinese goods more expensive for US consumers and businesses.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'CNY' },
+      { base: 'USD', target: 'HKD' },
+      { base: 'CNY', target: 'JPY' },
+      { base: 'USD', target: 'SGD' },
+    ],
+  },
+  {
+    slug: 'gbp-to-usd-exchange-rate',
+    title: 'GBP to USD Exchange Rate: Complete Guide for 2026',
+    description:
+      'Everything you need to know about the British Pound to US Dollar exchange rate. Current rate, historical trends, Brexit legacy effects, and forecast for the GBP/USD pair.',
+    category: 'analysis',
+    date: now,
+    readingTime: 6,
+    sections: [
+      {
+        heading: 'Understanding GBP/USD',
+        content:
+          'The GBP/USD pair, often called "Cable" in forex trading, represents how many US Dollars one British Pound can buy. It is one of the oldest and most traded currency pairs in the world, with a history dating back to the 1800s when exchange rates were transmitted via undersea cables between London and New York.',
+      },
+      {
+        heading: 'Current Market Dynamics',
+        content:
+          'The GBP/USD exchange rate in 2026 continues to reflect the economic relationship between the United Kingdom and the United States. Key drivers include interest rate decisions from the Bank of England and the Federal Reserve, UK economic data including GDP growth and inflation, and post-Brexit trade arrangements. The pair is known for its relatively high volatility compared to other major pairs.',
+      },
+      {
+        heading: 'Historical Context and Trading Ranges',
+        content:
+          'Over the past decade, GBP/USD has traded in a wide range from below 1.15 to above 1.40. Major events like the 2016 Brexit referendum, the COVID-19 pandemic, and the 2022 mini-budget crisis all caused significant moves. Understanding these historical patterns helps provide context for current exchange rate levels and potential future movements.',
+      },
+      {
+        heading: 'Practical Guide for Converting GBP to USD',
+        content:
+          'Whether you are a traveler heading to the United States, a business importing British goods, or an expat managing cross-border finances, understanding how to get the best GBP to USD exchange rate matters. Using our free currency converter gives you the mid-market rate, which you can compare against what banks and transfer services offer.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'GBP', target: 'USD' },
+      { base: 'GBP', target: 'EUR' },
+      { base: 'EUR', target: 'USD' },
+      { base: 'GBP', target: 'JPY' },
+    ],
+  },
+  {
+    slug: 'send-money-to-china',
+    title: 'How to Send Money to China: Best Ways in 2026',
+    description:
+      'Compare the best ways to send money to China from the USA and other countries. Find the cheapest exchange rates, lowest fees, and fastest transfer methods for sending RMB to China.',
+    category: 'guide',
+    date: now,
+    readingTime: 8,
+    sections: [
+      {
+        heading: 'Options for Sending Money to China',
+        content:
+          'There are several ways to send money to China, each with different costs, speeds, and convenience levels. Bank wire transfers are the most traditional method but often come with higher fees and less competitive exchange rates. Online money transfer services like Wise, Revolut, and CurrencyFair typically offer better rates and lower fees. Specialist providers focused on China transfers may offer additional convenience for regular senders.',
+      },
+      {
+        heading: 'Understanding Exchange Rates and Fees',
+        content:
+          'When sending money to China, the exchange rate you get can significantly impact how much RMB the recipient receives. Banks typically add a 3-5% markup to the mid-market rate, while online services often offer rates within 0.5-1% of the market rate. Always use our free currency converter to check the current USD to CNY mid-market rate before making a transfer, and compare what different providers offer.',
+      },
+      {
+        heading: 'Transfer Speed and Convenience',
+        content:
+          'Transfer speeds vary significantly by method. Bank wire transfers can take 3-5 business days to reach Chinese bank accounts. Online money transfer services are often faster, with some completing transfers within 1-2 business days. Some providers even offer instant transfers to certain Chinese digital payment platforms like Alipay or WeChat Pay, though these may come with higher fees.',
+      },
+      {
+        heading: 'Regulatory Considerations',
+        content:
+          'Sending money to China involves understanding both Chinese and international regulations. Chinese law places limits on how much foreign currency individuals can receive annually, and certain transfers may require documentation of the purpose. From the sending side, amounts over $10,000 typically require reporting to authorities in most countries.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'CNY' },
+      { base: 'USD', target: 'HKD' },
+      { base: 'CNY', target: 'JPY' },
+      { base: 'USD', target: 'SGD' },
+    ],
+  },
+  {
+    slug: 'jpy-to-usd-exchange-rate',
+    title: 'JPY to USD Exchange Rate: Japanese Yen Guide 2026',
+    description:
+      'Complete guide to the Japanese Yen to US Dollar exchange rate. Current JPY/USD rate, Bank of Japan policy impact, and what drives the yen in 2026.',
+    category: 'analysis',
+    date: now,
+    readingTime: 6,
+    sections: [
+      {
+        heading: 'The Japanese Yen in Global Markets',
+        content:
+          'The Japanese Yen (JPY) is the third most traded currency in the world and a major reserve currency. The JPY/USD exchange rate is particularly important given the close economic ties between Japan and the United States. Japan\'s position as a major exporter and holder of US Treasury securities means the yen-dollar exchange rate has implications far beyond the two countries.',
+      },
+      {
+        heading: 'Bank of Japan Policy and Yen Valuation',
+        content:
+          'The Bank of Japan\'s monetary policy is a primary driver of the yen\'s value. Japan\'s long period of ultra-low interest rates has made the yen a popular funding currency for carry trades, where investors borrow yen at low rates to invest in higher-yielding currencies. Any shift in BOJ policy can trigger significant moves in JPY/USD.',
+      },
+      {
+        heading: 'Yen as a Safe Haven Currency',
+        content:
+          'The Japanese Yen has historically been considered a safe haven currency, meaning it tends to strengthen during times of global economic uncertainty and market stress. This characteristic is driven by Japan\'s large current account surplus, high levels of domestic savings, and the country\'s position as a net creditor to the world.',
+      },
+      {
+        heading: 'Travel and Business Implications',
+        content:
+          'For travelers visiting Japan, the JPY/USD exchange rate directly affects purchasing power. A stronger dollar means more yen for your money, making travel to Japan more affordable. For businesses importing from Japan or exporting to Japanese customers, exchange rate fluctuations can significantly impact profit margins and competitiveness.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'JPY', target: 'USD' },
+      { base: 'JPY', target: 'CNY' },
+      { base: 'USD', target: 'JPY' },
+      { base: 'JPY', target: 'KRW' },
+    ],
+  },
+  {
+    slug: 'currency-exchange-travel-tips',
+    title: '10 Essential Currency Exchange Tips for International Travelers',
+    description:
+      'Save money on currency exchange during your international travels. Expert tips on avoiding bad rates, hidden fees, and getting the most value when converting money abroad.',
+    category: 'guide',
+    date: now,
+    readingTime: 7,
+    sections: [
+      {
+        heading: 'Never Exchange Money at Airports',
+        content:
+          'Airport currency exchange counters consistently offer the worst exchange rates and highest fees in the industry. They rely on captive travelers who need cash urgently. If you must arrive with some local currency, exchange a small amount at your local bank before departure, or use an ATM at your destination for a much better rate.',
+      },
+      {
+        heading: 'Use Credit Cards with No Foreign Transaction Fees',
+        content:
+          'The best way to pay for purchases abroad is with a credit card that charges no foreign transaction fees. Many travel rewards cards offer this benefit along with competitive exchange rates that closely track the mid-market rate. Always choose to pay in the local currency when given the option at merchants or ATMs — this is called "dynamic currency conversion" and it usually costs you more.',
+      },
+      {
+        heading: 'Compare Online Transfer Services',
+        content:
+          'Before your trip, compare rates from online money transfer services like Wise, Revolut, and others. These services often offer better exchange rates than traditional banks and allow you to lock in a rate before you travel. Some even offer multi-currency accounts where you can hold and manage several currencies at once.',
+      },
+      {
+        heading: 'Avoid Dynamic Currency Conversion',
+        content:
+          'When using your card abroad, you may be asked if you want to pay in your home currency or the local currency. Always choose the local currency. The merchant\'s exchange rate is almost always worse than what your bank would give you. This simple choice can save you 3-7% on every transaction.',
+      },
+      {
+        heading: 'Plan Ahead and Monitor Rates',
+        content:
+          'Exchange rates can fluctuate significantly in the weeks leading up to your trip. Use CurrencyHub to monitor rates and identify favorable trends. If you see a particularly good rate, consider exchanging some money in advance rather than waiting until you arrive. Some online services let you set rate alerts so you are notified when your target rate is available.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'EUR' },
+      { base: 'USD', target: 'THB' },
+      { base: 'USD', target: 'JPY' },
+      { base: 'GBP', target: 'EUR' },
+    ],
+  },
 ];
