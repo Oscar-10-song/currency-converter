@@ -24,7 +24,7 @@ export function SparklineChartWrapper({
   const chartData = range === 7 ? data7d : data30d;
 
   return (
-    <div className="mt-6 p-4 rounded-xl border border-neutral-100 dark:border-neutral-800">
+    <div className="mt-6 p-4 rounded-xl border border-neutral-100 dark:border-neutral-800 shadow-sm">
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
           Rate History
@@ -34,9 +34,9 @@ export function SparklineChartWrapper({
             <button
               key={d}
               onClick={() => setRange(d)}
-              className={`px-2.5 py-1 text-xs font-medium rounded-lg transition-colors ${
+              className={`px-2.5 py-1 text-xs font-medium rounded-lg transition-all duration-200 ${
                 range === d
-                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900'
+                  ? 'bg-indigo-500 text-white shadow-sm shadow-indigo-200 dark:shadow-indigo-900/30'
                   : 'bg-neutral-100 text-neutral-500 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700'
               }`}
             >

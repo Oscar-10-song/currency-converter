@@ -39,8 +39,10 @@ export default function HomePage() {
       <BannerTopAd />
 
       {/* Hero Section — Converter is the hero */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div className="max-w-2xl mx-auto">
+      <section className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        {/* Subtle radial gradient behind converter */}
+        <div className="absolute inset-0 -top-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50/40 via-transparent to-transparent dark:from-indigo-950/20 pointer-events-none" />
+        <div className="relative max-w-2xl mx-auto">
           {/* Headline */}
           <div className="text-center mb-8 sm:mb-10">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 dark:text-white">
@@ -72,7 +74,7 @@ export default function HomePage() {
                   <Link
                     key={`${pair.base}-${pair.target}`}
                     href={`/${pair.base.toLowerCase()}-to-${pair.target.toLowerCase()}`}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/30 dark:hover:text-indigo-400 transition-colors"
                   >
                     <span>{base?.flag}</span>
                     <span>{pair.base}/{pair.target}</span>

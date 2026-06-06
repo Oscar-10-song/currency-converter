@@ -46,7 +46,7 @@ export function Header() {
                 href={link.href}
                 className={`px-3 py-2 text-sm rounded-lg transition-colors ${
                   isActive(link.href)
-                    ? 'text-neutral-900 dark:text-white bg-neutral-100 dark:bg-neutral-800 font-medium'
+                    ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/40 font-medium'
                     : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-neutral-800/50'
                 }`}
               >

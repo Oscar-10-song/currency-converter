@@ -61,7 +61,7 @@ export function ResultDisplay({
   const copyText = `${result} ${toCurrency}`;
 
   return (
-    <div className="space-y-4 py-4">
+    <div className="space-y-4 py-4 animate-fade-in-up">
       {/* Main result + copy */}
       <div className="flex items-start gap-3">
         <span className="text-3xl sm:text-4xl font-semibold text-neutral-900 dark:text-white tracking-tight">

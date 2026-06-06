@@ -25,12 +25,13 @@ export function ConversionHistory() {
         </button>
       </div>
       <div className="space-y-1.5">
-        {history.map((entry) => {
+        {history.slice(0, 5).map((entry, index) => {
           const fromCcy = CURRENCIES[entry.fromCurrency];
           return (
             <div
               key={entry.id}
-              className="group flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl border border-neutral-100 dark:border-neutral-800 hover:border-neutral-200 dark:hover:border-neutral-700 transition-all"
+              style={{ animationDelay: `${index * 50}ms` }}
+              className="group flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-xl border border-neutral-100 dark:border-neutral-800 hover:border-neutral-200 dark:hover:border-neutral-700 hover:shadow-sm transition-all duration-200 animate-fade-in-up"
             >
               <div className="flex items-center gap-2.5 min-w-0">
                 <span className="text-base shrink-0">{fromCcy?.flag}</span>

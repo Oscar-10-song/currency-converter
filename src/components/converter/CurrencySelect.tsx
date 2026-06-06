@@ -59,7 +59,7 @@ export function CurrencySelect({ value, onChange, label }: CurrencySelectProps) 
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center gap-2.5 px-3.5 py-2.5 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl hover:border-neutral-300 dark:hover:border-neutral-600 transition-colors text-left"
+        className="w-full flex items-center gap-2.5 px-3.5 py-2.5 bg-white dark:bg-neutral-900 rounded-xl hover:border-neutral-300 dark:hover:border-neutral-600 transition-all duration-200 text-left ring-1 ring-neutral-200 dark:ring-neutral-700 focus:outline-none focus:ring-2 focus:ring-indigo-400/40"
       >
         {selected && (
           <>
@@ -83,7 +83,7 @@ export function CurrencySelect({ value, onChange, label }: CurrencySelectProps) 
       </button>
 
       {isOpen && (
-        <div className="absolute z-50 mt-1 w-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl shadow-lg overflow-hidden">
+        <div className="absolute z-50 mt-1 w-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl shadow-lg overflow-hidden animate-scale-in">
           <div className="p-2 border-b border-neutral-100 dark:border-neutral-800">
             <input
               ref={inputRef}

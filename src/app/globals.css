@@ -5,6 +5,40 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --animate-fade-in-up: fade-in-up 0.4s ease-out;
+  --animate-shimmer: shimmer 2s infinite linear;
+  --animate-scale-in: scale-in 0.2s ease-out;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Smooth scrolling */
@@ -13,20 +47,20 @@ html {
   scrollbar-gutter: stable;
 }
 
-/* Selection */
+/* Selection — indigo accent */
 ::selection {
-  background-color: #a3a3a3;
-  color: #000;
-}
-
-.dark ::selection {
-  background-color: #525252;
+  background-color: #6366f1;
   color: #fff;
 }
 
-/* Focus ring */
+.dark ::selection {
+  background-color: #818cf8;
+  color: #000;
+}
+
+/* Focus ring — indigo */
 *:focus-visible {
-  outline: 2px solid #a3a3a3;
+  outline: 2px solid #6366f1;
   outline-offset: 2px;
 }
 

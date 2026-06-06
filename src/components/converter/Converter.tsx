@@ -80,7 +80,7 @@ export function Converter({ defaultFrom = 'USD', defaultTo = 'CNY' }: ConverterP
               <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-neutral-400 dark:text-neutral-500 font-medium">
                 {toCcy?.symbol || '$'}
               </span>
-              <div className="w-full pl-8 pr-4 py-2.5 bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl text-sm text-neutral-900 dark:text-white">
+              <div className="w-full pl-8 pr-4 py-2.5 bg-neutral-50 dark:bg-neutral-800 ring-1 ring-neutral-200 dark:ring-neutral-700 rounded-xl text-sm text-neutral-900 dark:text-white">
                 {converter.isConverting ? (
                   <Skeleton className="h-4 w-24" />
                 ) : converter.result ? (
