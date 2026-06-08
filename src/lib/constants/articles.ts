@@ -387,4 +387,157 @@ export const ARTICLES: Article[] = [
       { base: 'GBP', target: 'EUR' },
     ],
   },
+  {
+    slug: 'usd-to-krw-exchange-rate',
+    title: 'USD to KRW Exchange Rate: South Korean Won Guide 2026',
+    description:
+      'Complete guide to the US Dollar to South Korean Won exchange rate. Current USD/KRW rate, factors driving the won, and practical tips for travelers and businesses.',
+    category: 'analysis',
+    date: now,
+    readingTime: 6,
+    sections: [
+      {
+        heading: 'Understanding the USD/KRW Pair',
+        content:
+          'The USD/KRW exchange rate represents how many South Korean Won one US Dollar can buy. As the currency of the world\'s 12th largest economy and a major export powerhouse, the Korean Won is one of the most actively traded Asian currencies. South Korea\'s export-driven economy — led by semiconductors, automobiles, and shipbuilding — means the USD/KRW rate is highly sensitive to global trade flows and demand for Korean exports.',
+      },
+      {
+        heading: 'Key Factors Influencing USD/KRW',
+        content:
+          'The USD/KRW exchange rate is primarily driven by interest rate differentials between the Federal Reserve and the Bank of Korea, global trade demand for Korean exports, and geopolitical factors related to the Korean Peninsula. South Korea\'s large current account surplus typically supports the won, while global risk aversion tends to weaken it as investors flee emerging market currencies. The Bank of Korea actively intervenes in currency markets to smooth excessive volatility.',
+      },
+      {
+        heading: 'Historical Trends and Trading Range',
+        content:
+          'The USD/KRW pair has historically traded in a wide range. During the 1997 Asian Financial Crisis, the won depreciated dramatically. More recently, the pair has fluctuated between approximately 1,100 and 1,400 won per dollar. The 2020 pandemic caused significant volatility, and subsequent Federal Reserve rate hikes pushed the pair higher. Understanding these historical patterns provides context for current exchange rate levels.',
+      },
+      {
+        heading: 'Practical Applications for Travelers and Businesses',
+        content:
+          'For travelers visiting South Korea, monitoring the USD/KRW rate helps determine the best time to exchange currency. A stronger dollar means more won for your money, making accommodation, dining, and shopping more affordable. For businesses importing Korean electronics or automotive parts, exchange rate fluctuations directly impact profit margins. Exporters benefit from a weaker won as their goods become more competitive internationally.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'KRW' },
+      { base: 'JPY', target: 'KRW' },
+      { base: 'USD', target: 'JPY' },
+      { base: 'CNY', target: 'KRW' },
+    ],
+  },
+  {
+    slug: 'eur-to-cny-exchange-rate',
+    title: 'EUR to CNY Exchange Rate: Euro to Chinese Yuan Guide 2026',
+    description:
+      'Complete guide to the Euro to Chinese Yuan exchange rate. Understand EUR/CNY dynamics, key factors, and practical uses for businesses and travelers.',
+    category: 'analysis',
+    date: now,
+    readingTime: 6,
+    sections: [
+      {
+        heading: 'The EUR/CNY Currency Pair',
+        content:
+          'The EUR/CNY exchange rate represents how many Chinese Yuan one Euro can buy. This cross-currency pair is increasingly important as trade between the European Union and China continues to grow. The EU is China\'s largest trading partner, and China is the EU\'s second-largest, making the EUR/CNY rate a vital indicator of economic relations between two of the world\'s largest economic blocs.',
+      },
+      {
+        heading: 'Factors Affecting EUR/CNY',
+        content:
+          'The EUR/CNY exchange rate is influenced by monetary policy decisions from both the European Central Bank and the People\'s Bank of China, trade balances between the Eurozone and China, and broader global economic conditions. The ECB\'s interest rate decisions relative to the PBOC\'s managed currency approach create unique dynamics. Additionally, China\'s economic growth data and Eurozone economic indicators both play significant roles in determining the cross rate.',
+      },
+      {
+        heading: 'Trade and Investment Implications',
+        content:
+          'European companies importing goods from China or exporting to Chinese markets must carefully monitor the EUR/CNY rate. A stronger euro makes Chinese imports cheaper for European consumers but makes European exports more expensive in China. Chinese investment in European infrastructure, technology, and real estate also affects currency flows between the regions.',
+      },
+      {
+        heading: 'Using the EUR/CNY Rate',
+        content:
+          'Use CurrencyHub to check the current EUR to CNY mid-market rate before making any international transfers or currency exchanges. Whether you are a business managing cross-border payments, a student studying in China from Europe, or a traveler visiting either region, understanding the current exchange rate helps you make better financial decisions and avoid unfavorable rates offered by banks.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'EUR', target: 'CNY' },
+      { base: 'USD', target: 'CNY' },
+      { base: 'EUR', target: 'USD' },
+      { base: 'EUR', target: 'JPY' },
+    ],
+  },
+  {
+    slug: 'how-to-avoid-currency-exchange-fees',
+    title: 'How to Avoid Currency Exchange Fees: Save Money on Every Conversion',
+    description:
+      'Learn how to avoid hidden currency exchange fees. Practical tips on getting the best exchange rates, avoiding bank markups, and saving money on international transfers.',
+    category: 'guide',
+    date: now,
+    readingTime: 5,
+    sections: [
+      {
+        heading: 'Understanding Hidden Currency Exchange Fees',
+        content:
+          'Most currency exchange services advertise "no fees" but make money through exchange rate markups. The mid-market rate — the real exchange rate between currencies — is what you see on CurrencyHub. Banks and exchange services typically add a 2-5% margin on top of this rate. Understanding this markup is the first step to avoiding unnecessary costs. Always compare the rate offered with the current mid-market rate to see the real cost.',
+      },
+      {
+        heading: 'Best Options for Low-Cost Currency Exchange',
+        content:
+          'Online money transfer services like Wise, Revolut, and Atlantic Money offer exchange rates within 0.5-1% of the mid-market rate with transparent fees. These services are significantly cheaper than traditional banks for most currency conversions. For travel, credit cards with no foreign transaction fees are often the most cost-effective option, as they use exchange rates very close to the wholesale rate.',
+      },
+      {
+        heading: 'What to Avoid',
+        content:
+          'Avoid airport exchange bureaus, hotel currency exchange desks, and dynamic currency conversion at merchants. These services consistently offer the worst exchange rates with markups of 5-10% or more. Also avoid exchanging currency at your bank\'s branch if possible, as bank rates typically include a 3-5% markup. ATM withdrawals at destination using a fee-free card are almost always a better option.',
+      },
+      {
+        heading: 'Tools and Strategies for Saving',
+        content:
+          'Use CurrencyHub to check the latest mid-market exchange rate before any transaction. Set up rate alerts with online transfer services to lock in favorable rates. For regular international transfers, consider opening a multi-currency account that lets you hold and exchange multiple currencies at competitive rates. For large transfers, negotiate with your bank or use a specialist currency broker who may offer better rates for high-value transactions.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'EUR' },
+      { base: 'USD', target: 'GBP' },
+      { base: 'USD', target: 'CNY' },
+      { base: 'EUR', target: 'GBP' },
+    ],
+  },
+  {
+    slug: 'currency-exchange-for-students-abroad',
+    title: 'Currency Exchange Guide for International Students 2026',
+    description:
+      'Essential currency exchange tips for international students. Save money on tuition payments, living expenses, and money transfers while studying abroad.',
+    category: 'guide',
+    date: now,
+    readingTime: 7,
+    sections: [
+      {
+        heading: 'Managing Money Across Borders',
+        content:
+          'International students face unique currency challenges — paying tuition in one currency while receiving funds in another, managing living expenses abroad, and sending money home during holidays. Understanding currency exchange can save international students hundreds or even thousands of dollars per year. The key is to plan ahead and use the right tools for each type of transaction.',
+      },
+      {
+        heading: 'Paying Tuition and Fees',
+        content:
+          'Tuition payments are often the largest currency transaction international students make. Paying with a credit card typically incurs 2-3% foreign transaction fees plus potential cash advance fees. Bank wire transfers can cost $30-50 per transfer with poor exchange rates. Online transfer services like Wise or FlyWire (specializing in education payments) often provide better rates and lower fees for large tuition payments.',
+      },
+      {
+        heading: 'Daily Banking and Living Expenses',
+        content:
+          'Open a local bank account at your study destination as soon as possible to avoid repeated currency conversion fees. For transferring money for living expenses, use online transfer services rather than international bank transfers. Consider a multi-currency card like Revolut or Wise that lets you hold funds in multiple currencies and spend at the mid-market rate. These cards often offer better rates than traditional student bank accounts.',
+      },
+      {
+        heading: 'Sending Money Home and Seasonal Transfers',
+        content:
+          'When sending money home or transferring funds for holiday travel, timing matters. Monitor exchange rates using CurrencyHub and transfer when rates are favorable. Avoid exchanging currency at airports or tourist areas during travel. For regular transfers, consider setting up recurring transfers with competitive services to average out exchange rate fluctuations over time.',
+      },
+      {
+        heading: 'Long-Term Currency Strategy',
+        content:
+          'For students studying abroad for multiple years, developing a currency strategy can save significant money. Consider transferring larger amounts less frequently to reduce per-transfer fees. Monitor economic news that might affect exchange rates between your home currency and study destination currency. Use CurrencyHub to check rates regularly and stay informed about market movements that could affect your finances.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'CNY' },
+      { base: 'USD', target: 'EUR' },
+      { base: 'USD', target: 'GBP' },
+      { base: 'USD', target: 'AUD' },
+    ],
+  },
 ];
