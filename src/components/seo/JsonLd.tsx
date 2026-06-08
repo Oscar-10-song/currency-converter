@@ -89,7 +89,7 @@ export function JsonLdWebSite() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'CurrencyHub',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://currencyhub.vercel.app',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.currencyhub.me',
     description: 'Free currency converter with real-time exchange rates',
     potentialAction: {
       '@type': 'SearchAction',
