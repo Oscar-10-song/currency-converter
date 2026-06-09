@@ -4,9 +4,17 @@ import { AdSlot } from './AdSlot';
  * Pre-configured ad slots for common page positions.
  * These components wrap AdSlot with position-specific defaults,
  * making it easy to manage ads from one file.
+ *
+ * If no NEXT_PUBLIC_ADSENSE_PUBLISHER_ID is set, all ad slots return null
+ * (no "Advertisement" placeholder shown until AdSense is configured).
  */
 
+function isAdEnabled(): boolean {
+  return !!process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
+}
+
 export function BannerTopAd() {
+  if (!isAdEnabled()) return null;
   return (
     <AdSlot
       slot="banner-top"
@@ -18,6 +26,7 @@ export function BannerTopAd() {
 }
 
 export function InContentAd() {
+  if (!isAdEnabled()) return null;
   return (
     <AdSlot
       slot="in-content"
@@ -29,6 +38,7 @@ export function InContentAd() {
 }
 
 export function SidebarAd() {
+  if (!isAdEnabled()) return null;
   return (
     <div className="hidden lg:block">
       <AdSlot
@@ -42,6 +52,7 @@ export function SidebarAd() {
 }
 
 export function FooterAd() {
+  if (!isAdEnabled()) return null;
   return (
     <AdSlot
       slot="footer"
@@ -53,6 +64,7 @@ export function FooterAd() {
 }
 
 export function MobileStickyAd() {
+  if (!isAdEnabled()) return null;
   return (
     <div className="lg:hidden">
       <AdSlot
