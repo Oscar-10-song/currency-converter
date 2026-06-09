@@ -540,4 +540,226 @@ export const ARTICLES: Article[] = [
       { base: 'USD', target: 'AUD' },
     ],
   },
+  {
+    slug: 'aud-to-usd-exchange-rate',
+    title: 'AUD to USD Exchange Rate: Australian Dollar Guide 2026',
+    description:
+      'Complete guide to the Australian Dollar to US Dollar exchange rate. AUD/USD trends, RBA policy impact, commodity prices, and practical tips for students and travelers.',
+    category: 'analysis',
+    date: now,
+    readingTime: 6,
+    sections: [
+      {
+        heading: 'Understanding the Australian Dollar',
+        content:
+          'The Australian Dollar (AUD) is one of the most actively traded currencies in the world, often ranked among the top 5 by trading volume. The AUD/USD exchange rate represents how many US Dollars one Australian Dollar can buy. As a commodity currency, the Australian Dollar is heavily influenced by global commodity prices, particularly iron ore, coal, and natural gas — Australia\'s primary exports. This makes the AUD/USD pair a favorite among forex traders looking to gain exposure to commodity markets.',
+      },
+      {
+        heading: 'Key Drivers of AUD/USD',
+        content:
+          'The AUD/USD exchange rate is driven by several key factors: Reserve Bank of Australia (RBA) interest rate decisions compared to the Federal Reserve, global commodity price cycles, and China\'s economic health (as Australia\'s largest trading partner). When Chinese industrial demand is strong, Australian exports boom and the AUD tends to strengthen. Conversely, during global economic slowdowns, the AUD often weakens as commodity demand falls.',
+      },
+      {
+        heading: 'Impact on International Students and Travelers',
+        content:
+          'Australia is one of the most popular study abroad destinations, with hundreds of thousands of international students. The AUD/USD rate directly affects tuition costs and living expenses for students paying in US Dollars or currencies pegged to it. A weaker AUD means cheaper tuition and living costs for international students. Travelers also benefit from monitoring the rate — Australia can be an expensive destination, and a favorable exchange rate makes a significant difference.',
+      },
+      {
+        heading: 'Working Holiday and Immigration',
+        content:
+          'Australia\'s working holiday visa program attracts young travelers worldwide. Exchange rate timing matters when transferring earned savings back home. A stronger AUD means more US Dollars for your Australian savings. Similarly, immigrants sending remittances to family should monitor the AUD/USD rate to maximize the value of their transfers.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'AUD', target: 'USD' },
+      { base: 'USD', target: 'AUD' },
+      { base: 'AUD', target: 'CNY' },
+      { base: 'AUD', target: 'NZD' },
+    ],
+  },
+  {
+    slug: 'usd-to-hkd-exchange-rate',
+    title: 'USD to HKD Exchange Rate: Hong Kong Dollar Guide 2026',
+    description:
+      'Complete guide to the US Dollar to Hong Kong Dollar exchange rate. Understand the HKD peg system, USD/HKD trading band, and implications for trade and finance.',
+    category: 'analysis',
+    date: now,
+    readingTime: 5,
+    sections: [
+      {
+        heading: 'The Hong Kong Dollar Peg System',
+        content:
+          'The Hong Kong Dollar (HKD) operates under a unique linked exchange rate system that has been in place since 1983. The Hong Kong Monetary Authority (HKMA) maintains the HKD within a narrow trading band of 7.75 to 7.85 per US Dollar. This peg means the USD/HKD rate is exceptionally stable compared to freely floating currencies, making Hong Kong a preferred gateway for international trade and finance with China.',
+      },
+      {
+        heading: 'How the Linked Exchange Rate Works',
+        content:
+          'When the HKD weakens to 7.85, the HKMA buys Hong Kong Dollars to strengthen the currency. When it strengthens to 7.75, the HKMA sells HKD to weaken it. This automatic mechanism keeps the exchange rate within the band. For businesses and individuals, this stability means currency risk is minimal for USD/HKD transactions, unlike most other currency pairs.',
+      },
+      {
+        heading: 'Trade and Business Implications',
+        content:
+          'Hong Kong\'s status as a global financial center and gateway to China means the USD/HKD rate has outsized importance. Companies using Hong Kong as a base for China operations benefit from predictable exchange rates. The HKD peg also means that Hong Kong interest rates generally track US interest rates, as the HKMA must follow Federal Reserve policy to maintain the peg.',
+      },
+      {
+        heading: 'Converting Between USD and HKD',
+        content:
+          'While the narrow trading band limits exchange rate risk, timing still matters for large transactions. The difference between buying at 7.75 and 7.85 represents over 1%, which adds up for significant amounts. Use CurrencyHub to check the current rate within the band and compare it against what banks and money changers offer — many add hidden markups even on this stable pair.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'HKD' },
+      { base: 'USD', target: 'CNY' },
+      { base: 'HKD', target: 'CNY' },
+      { base: 'USD', target: 'SGD' },
+    ],
+  },
+  {
+    slug: 'usd-to-sgd-exchange-rate',
+    title: 'USD to SGD Exchange Rate: Singapore Dollar Guide 2026',
+    description:
+      'Complete guide to the US Dollar to Singapore Dollar exchange rate. USD/SGD trends, MAS monetary policy, and practical tips for business and travel in Singapore.',
+    category: 'analysis',
+    date: now,
+    readingTime: 5,
+    sections: [
+      {
+        heading: 'The Singapore Dollar in Global Markets',
+        content:
+          'The Singapore Dollar (SGD) is one of the most stable and well-managed currencies in Asia. The Monetary Authority of Singapore (MAS) manages the SGD against a trade-weighted basket of currencies rather than targeting interest rates. This unique approach has kept Singapore\'s currency remarkably stable while allowing gradual appreciation over time, reflecting the country\'s strong economic fundamentals.',
+      },
+      {
+        heading: 'What Drives USD/SGD',
+        content:
+          'The USD/SGD exchange rate is primarily influenced by MAS policy adjustments, Singapore\'s trade performance, and US Dollar strength. Singapore\'s position as a global trade hub means the SGD is sensitive to global economic conditions. As a major financial center with significant foreign investment flows, Singapore\'s currency also reflects capital flows into and out of the region.',
+      },
+      {
+        heading: 'Business and Trade Hub',
+        content:
+          'Singapore serves as the regional headquarters for thousands of multinational corporations operating in Southeast Asia. The USD/SGD rate directly impacts regional business operations, from supply chain costs to employee compensation. Singapore\'s role as a commodity trading hub (oil, metals, agricultural products) means currency fluctuations can affect global commodity pricing.',
+      },
+      {
+        heading: 'Travel and Expat Life',
+        content:
+          'Singapore is consistently rated one of the world\'s most expensive cities. Understanding the USD/SGD exchange rate helps travelers and expats budget effectively. A stronger US Dollar significantly improves purchasing power in Singapore, from accommodation to dining and entertainment. Use CurrencyHub to monitor the rate before your trip or before making large SGD-denominated payments.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'SGD' },
+      { base: 'SGD', target: 'MYR' },
+      { base: 'USD', target: 'CNY' },
+      { base: 'SGD', target: 'JPY' },
+    ],
+  },
+  {
+    slug: 'usd-to-inr-exchange-rate',
+    title: 'USD to INR Exchange Rate: Indian Rupee Guide 2026',
+    description:
+      'Complete guide to the US Dollar to Indian Rupee exchange rate. USD/INR trends, RBI policy factors, and practical tips for remittances and business with India.',
+    category: 'analysis',
+    date: now,
+    readingTime: 6,
+    sections: [
+      {
+        heading: 'Understanding USD/INR',
+        content:
+          'The USD/INR exchange rate represents how many Indian Rupees one US Dollar can buy. India is the world\'s largest recipient of remittances, with over $100 billion sent home annually by the Indian diaspora. This makes the USD/INR rate critically important for millions of families and one of the most watched currency pairs in emerging markets.',
+      },
+      {
+        heading: 'Key Factors Affecting the Rupee',
+        content:
+          'The Reserve Bank of India (RBI) actively manages the rupee through interventions in the forex market. Key factors driving USD/INR include India\'s trade deficit (particularly oil imports), foreign investment flows into Indian stocks and bonds, and RBI policy decisions. India\'s position as the world\'s third-largest oil importer means crude oil prices significantly impact the rupee — higher oil prices typically weaken the INR.',
+      },
+      {
+        heading: 'Remittances and Money Transfers',
+        content:
+          'For the millions of NRIs (Non-Resident Indians) sending money home, the USD/INR exchange rate directly affects how much their families receive. Even a 1 rupee difference on a $10,000 transfer means Rs. 10,000 more or less. Using online transfer services that offer rates close to the market rate rather than bank wire transfers can save thousands of rupees on each transaction.',
+      },
+      {
+        heading: 'India\'s Growing Economic Role',
+        content:
+          'India\'s rapid economic growth and expanding middle class make the rupee increasingly important in global currency markets. Foreign direct investment, IT services exports, and India\'s position as the world\'s most populous country all influence the USD/INR exchange rate. Businesses outsourcing to India or selling to the Indian market should monitor the rate as part of their financial planning.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'INR' },
+      { base: 'USD', target: 'AED' },
+      { base: 'GBP', target: 'INR' },
+      { base: 'USD', target: 'SGD' },
+    ],
+  },
+  {
+    slug: 'mid-market-rate-vs-bank-rate',
+    title: 'Mid-Market Rate vs Bank Rate: Why You Pay More for Currency Exchange',
+    description:
+      'Understand the difference between mid-market exchange rates and bank rates. Learn how rate markups work and how to get the best exchange rate for your money.',
+    category: 'explainer',
+    date: now,
+    readingTime: 5,
+    sections: [
+      {
+        heading: 'What is the Mid-Market Rate?',
+        content:
+          'The mid-market rate (also called the interbank rate or spot rate) is the real exchange rate between two currencies — the midpoint between what buyers are willing to pay (bid) and what sellers are asking (ask). CurrencyHub shows you this rate. It is the rate that banks and large financial institutions trade at with each other, and it is widely considered the fairest and most transparent exchange rate benchmark.',
+      },
+      {
+        heading: 'The Bid-Ask Spread Explained',
+        content:
+          'In currency markets, the bid price is what buyers are willing to pay for a currency, and the ask price is what sellers want to receive. The difference between them is called the spread. For major currency pairs like EUR/USD, the spread can be as narrow as 0.0001 (1 pip). The mid-market rate is the exact midpoint of these two prices. When you see "live rates" on CurrencyHub, you are seeing the mid-market rate — the most accurate reflection of a currency pair\'s value.',
+      },
+      {
+        heading: 'How Banks and Services Mark Up Rates',
+        content:
+          'Banks, airport exchange bureaus, and even online services almost never give you the mid-market rate. Instead, they add a markup — typically 2-5% for banks, 5-10% for airport kiosks, and 0.5-1% for competitive online services. For example, if the mid-market rate for USD to EUR is 0.92, a bank might give you 0.89, pocketing the 3% difference as profit. On a $1,000 exchange, that is $30 you never see.',
+      },
+      {
+        heading: 'How to Get Rates Close to Mid-Market',
+        content:
+          'Always check the current mid-market rate on CurrencyHub before making any exchange. Then compare what banks, transfer services, and exchange bureaus offer against this benchmark. Online money transfer services like Wise and Revolut offer rates within 0.5% of the mid-market rate — significantly better than traditional banks. For large transfers, even a 0.5% difference can mean hundreds of dollars saved. The mid-market rate is your benchmark for evaluating every offer.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'EUR' },
+      { base: 'USD', target: 'GBP' },
+      { base: 'USD', target: 'CNY' },
+      { base: 'EUR', target: 'GBP' },
+    ],
+  },
+  {
+    slug: 'usd-to-thb-exchange-rate',
+    title: 'USD to THB Exchange Rate: Thai Baht Guide for Travelers 2026',
+    description:
+      'Complete guide to the US Dollar to Thai Baht exchange rate. USD/THB trends, best places to exchange money in Thailand, and tips for getting the most baht for your dollar.',
+    category: 'guide',
+    date: now,
+    readingTime: 6,
+    sections: [
+      {
+        heading: 'Understanding the Thai Baht',
+        content:
+          'The Thai Baht (THB) is one of the strongest and most stable currencies in Southeast Asia. The USD/THB exchange rate determines how many Thai Baht one US Dollar can buy. Thailand is one of the world\'s most popular tourist destinations, welcoming over 30 million visitors annually, making THB one of the most exchanged currencies by travelers globally.',
+      },
+      {
+        heading: 'Where to Exchange Money in Thailand',
+        content:
+          'SuperRich (the orange one, not the green one) consistently offers the best exchange rates in Thailand with locations in Bangkok, Chiang Mai, Phuket, and major tourist areas. Bank exchange booths (SCB, Kasikorn, Bangkok Bank) offer decent rates but slightly lower than SuperRich. Avoid exchanging at airports and hotels — their rates are typically 3-7% worse. Always bring crisp, new US Dollar bills as Thai money changers may reject old or damaged notes.',
+      },
+      {
+        heading: 'ATMs vs Cash Exchange',
+        content:
+          'Thai ATMs charge a 220 baht ($6+) fee per withdrawal on foreign cards, which is significant for smaller amounts. It is often better to bring clean US Dollars in cash and exchange them at a good money changer in Thailand. However, for extended stays, withdrawing larger amounts from ATMs to spread the fee is also a viable strategy. Check the current USD/THB rate on CurrencyHub before your trip so you know what to expect.',
+      },
+      {
+        heading: 'Seasonal Patterns and Best Timing',
+        content:
+          'The Thai Baht often strengthens during peak tourist seasons (December-February) due to increased demand for THB. The currency also reacts to Bank of Thailand monetary policy decisions and Thailand\'s export performance. Monitor the USD/THB rate on CurrencyHub in the weeks before your trip — converting when the rate is favorable can mean more spending money for your vacation.',
+      },
+    ],
+    relatedPairs: [
+      { base: 'USD', target: 'THB' },
+      { base: 'EUR', target: 'THB' },
+      { base: 'USD', target: 'VND' },
+      { base: 'USD', target: 'MYR' },
+    ],
+  },
 ];
