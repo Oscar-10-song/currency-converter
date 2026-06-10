@@ -73,7 +73,13 @@ export async function getExchangeRate(
     }
 
     const data = await response.json();
-    return data.rates?.[to] ?? null;
+    const rate = data.rates?.[to];
+    if (rate !== undefined && rate !== null) return rate;
+
+    // Frankfurter returned 200 but doesn't include the target currency
+    // (e.g., from=USD&to=COP — COP is not in Frankfurter's 30-currency set).
+    // Fall back to cross-rate via USD or hardcoded data.
+    return getCrossRate(from, to);
   } catch (error) {
     console.error(`Failed to get rate ${from}/${to}:`, error);
     return getCrossRate(from, to);
@@ -138,18 +144,28 @@ export async function getHistoricalRates(
 
 async function getCrossRate(from: string, to: string): Promise<number | null> {
   try {
-    const [fromRates, toRates] = await Promise.all([
-      getLatestRates(from),
-      getLatestRates(to),
-    ]);
-
-    if (fromRates?.rates?.['USD'] && toRates?.rates?.['USD']) {
-      // 1 from = (1 / fromRates.USD) USD
-      // 1 USD = toRates.USD in to currency
-      // So 1 from = toRates.USD / fromRates.USD
-      return toRates.rates['USD'] / fromRates.rates['USD'];
+    // First attempt: try direct rate from the 'from' currency's latest rates
+    const fromRates = await getLatestRates(from);
+    if (fromRates?.rates?.[to] !== undefined) {
+      return fromRates.rates[to];
     }
-    return null;
+
+    // Second attempt: cross via USD
+    const toRates = await getLatestRates(to);
+
+    // The base currency is never included in Frankfurter's rates object.
+    // When base=USD, rates['USD'] is missing — we treat it as 1.
+    const fromUsdRate = from === 'USD' ? 1 : fromRates?.rates?.['USD'];
+    const toUsdRate = to === 'USD' ? 1 : toRates?.rates?.['USD'];
+
+    if (fromUsdRate !== undefined && toUsdRate !== undefined) {
+      // 1 from = fromUsdRate USD
+      // 1 USD = 1 / toUsdRate in to currency
+      // So 1 from = toUsdRate / fromUsdRate
+      return toUsdRate / fromUsdRate;
+    }
+
+    return getHardcodedRate(from, to);
   } catch {
     return getHardcodedRate(from, to);
   }
