@@ -65,7 +65,7 @@ export const TOP_CURRENCY_CODES = [
 ];
 
 /**
- * Top 50 most searched currency pairs for SEO pages.
+ * Top 50 most searched currency pairs — used for homepage quick links.
  * Ordered by global search volume estimate.
  */
 export const TOP_PAIRS: { base: string; target: string }[] = [
@@ -120,3 +120,39 @@ export const TOP_PAIRS: { base: string; target: string }[] = [
   { base: 'CAD', target: 'USD' },
   { base: 'CHF', target: 'USD' },
 ];
+
+/**
+ * All possible currency pairs (50 × 49 = 2,450 pairs).
+ * Each pair maps to a unique SEO page: /xxx-to-yyy
+ * Captures long-tail search traffic for every currency combination.
+ * Sorted by priority: major currencies first, then alphabetical.
+ */
+const ALL_CURRENCY_CODES = Object.keys(CURRENCIES);
+
+function generateAllPairs(): { base: string; target: string }[] {
+  const pairs: { base: string; target: string }[] = [];
+  const majorSet = new Set(TOP_CURRENCY_CODES);
+
+  // Tier 1: Major × All (highest search volume)
+  for (const base of TOP_CURRENCY_CODES) {
+    for (const target of ALL_CURRENCY_CODES) {
+      if (base !== target) {
+        pairs.push({ base, target });
+      }
+    }
+  }
+
+  // Tier 2: Non-major × All (long-tail coverage)
+  for (const base of ALL_CURRENCY_CODES) {
+    if (majorSet.has(base)) continue;
+    for (const target of ALL_CURRENCY_CODES) {
+      if (base !== target) {
+        pairs.push({ base, target });
+      }
+    }
+  }
+
+  return pairs;
+}
+
+export const ALL_PAIRS: { base: string; target: string }[] = generateAllPairs();

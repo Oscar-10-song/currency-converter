@@ -1,12 +1,13 @@
 import { MetadataRoute } from 'next';
-import { CURRENCIES, TOP_PAIRS } from '@/lib/constants/currencies';
+import { CURRENCIES, ALL_PAIRS } from '@/lib/constants/currencies';
 import { SITE_CONFIG } from '@/lib/constants/routes';
 import { ARTICLES } from '@/lib/constants/articles';
 
 /**
  * Dynamic sitemap generation.
- * Includes: homepage, all currency pairs, all currency pages, and info pages.
- * This ensures all SEO pages are discoverable by search engines.
+ * Includes: homepage, all 2,450 currency pairs, single currency pages,
+ * blog articles, and static info pages.
+ * Total: ~2,500+ URLs, all discoverable by search engines.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.url;
@@ -14,48 +15,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: now,
-      changeFrequency: 'daily',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/currencies`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
+    { url: baseUrl, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
+    { url: `${baseUrl}/currencies`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/pairs`, lastModified: now, changeFrequency: 'daily', priority: 0.8 },
+    { url: `${baseUrl}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${baseUrl}/privacy`, lastModified: now, changeFrequency: 'monthly', priority: 0.3 },
+    { url: `${baseUrl}/terms`, lastModified: now, changeFrequency: 'monthly', priority: 0.3 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
   ];
 
   // Blog article pages
@@ -66,23 +33,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // Currency pair pages (Top 50 pairs + all pairs against USD)
-  const pairPages: MetadataRoute.Sitemap = TOP_PAIRS.map((pair) => ({
-    url: `${baseUrl}/${pair.base.toLowerCase()}-to-${pair.target.toLowerCase()}`,
-    lastModified: now,
-    changeFrequency: 'daily' as const,
-    priority: 0.9,
-  }));
-
-  // Generate additional pairs: all currencies x USD (if not already in TOP_PAIRS)
-  const usdPairs: MetadataRoute.Sitemap = Object.keys(CURRENCIES)
-    .filter((code) => code !== 'USD' && !TOP_PAIRS.some((p) => p.base === code && p.target === 'USD'))
-    .map((code) => ({
-      url: `${baseUrl}/${code.toLowerCase()}-to-usd`,
+  // All 2,450 currency pair pages
+  const pairPages: MetadataRoute.Sitemap = ALL_PAIRS.map((pair, i) => {
+    // Tiered priority: major×major pairs get 0.9, others get 0.75
+    const priority = i < 50 * 16 ? 0.9 : 0.75;
+    return {
+      url: `${baseUrl}/${pair.base.toLowerCase()}-to-${pair.target.toLowerCase()}`,
       lastModified: now,
       changeFrequency: 'daily' as const,
-      priority: 0.9,
-    }));
+      priority,
+    };
+  });
 
   // Single currency pages
   const currencyPages: MetadataRoute.Sitemap = Object.keys(CURRENCIES).map((code) => ({
@@ -92,35 +53,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Also add reverse pairs for all USD pairs (USD to X is already in TOP_PAIRS for most)
-  const reverseUsdPairs: MetadataRoute.Sitemap = Object.keys(CURRENCIES)
-    .filter(
-      (code) =>
-        code !== 'USD' &&
-        !TOP_PAIRS.some((p) => p.base === 'USD' && p.target === code)
-    )
-    .map((code) => ({
-      url: `${baseUrl}/usd-to-${code.toLowerCase()}`,
-      lastModified: now,
-      changeFrequency: 'daily' as const,
-      priority: 0.85,
-    }));
-
-  // Combine all, deduplicating by URL
-  const allPages = [
-    ...staticPages,
-    ...blogPages,
-    ...pairPages,
-    ...usdPairs,
-    ...reverseUsdPairs,
-    ...currencyPages,
-  ];
-
-  // Deduplicate by URL
-  const seen = new Set<string>();
-  return allPages.filter((page) => {
-    if (seen.has(page.url)) return false;
-    seen.add(page.url);
-    return true;
-  });
+  return [...staticPages, ...blogPages, ...pairPages, ...currencyPages];
 }

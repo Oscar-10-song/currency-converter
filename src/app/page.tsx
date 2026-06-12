@@ -68,7 +68,7 @@ export default function HomePage() {
               Popular Currency Pairs
             </h2>
             <div className="flex flex-wrap justify-center gap-2">
-              {TOP_PAIRS.slice(0, 12).map((pair) => {
+              {TOP_PAIRS.slice(0, 16).map((pair) => {
                 const base = CURRENCIES[pair.base];
                 return (
                   <Link
@@ -81,6 +81,14 @@ export default function HomePage() {
                   </Link>
                 );
               })}
+            </div>
+            <div className="text-center mt-3">
+              <Link
+                href="/pairs"
+                className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline"
+              >
+                Browse all 2,450+ currency pairs →
+              </Link>
             </div>
           </div>
         </div>

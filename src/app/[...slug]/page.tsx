@@ -7,7 +7,7 @@ import { TransferLinks } from '@/components/affiliate/TransferLinks';
 import { BannerTopAd, InContentAd } from '@/components/ads/AdPlacements';
 import { JsonLdBreadcrumb, JsonLdExchangeRate, JsonLdFAQ } from '@/components/seo/JsonLd';
 import { Breadcrumb } from '@/components/seo/Breadcrumb';
-import { CURRENCIES, TOP_PAIRS } from '@/lib/constants/currencies';
+import { CURRENCIES, ALL_PAIRS } from '@/lib/constants/currencies';
 import { getPairSeo, getCurrencySeo } from '@/lib/constants/seo';
 import { SITE_CONFIG } from '@/lib/constants/routes';
 import { getExchangeRate, getHistoricalRates } from '@/lib/api/exchange-rate';
@@ -105,10 +105,13 @@ async function CurrencyPairPage({ base, target }: { base: string; target: string
 
   const inverseRate = rate ? 1 / rate : null;
 
-  // Build related pairs (same base currency)
-  const relatedPairs = TOP_PAIRS.filter(
-    (p) => p.base === base && p.target !== target
-  ).slice(0, 8);
+  // Build related pairs: same base, up to 12
+  const relatedPairs = ALL_PAIRS
+    .filter((p) => p.base === base && p.target !== target)
+    .slice(0, 12);
+
+  // Common conversion amounts for long-tail SEO
+  const commonAmounts = [1, 5, 10, 25, 50, 100, 500, 1000, 5000, 10000];
 
   const faqItems = [
     {
@@ -179,6 +182,41 @@ async function CurrencyPairPage({ base, target }: { base: string; target: string
             </div>
           </div>
 
+          {/* Common Conversion Amounts — captures "X USD to EUR" long-tail queries */}
+          {rate && (
+            <div className="mt-6">
+              <h2 className="text-sm font-semibold text-neutral-900 dark:text-white mb-3">
+                {base} to {target} Conversion Table
+              </h2>
+              <div className="overflow-hidden rounded-xl border border-neutral-100 dark:border-neutral-800">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-neutral-50 dark:bg-neutral-900/50">
+                      <th className="px-4 py-2.5 text-left text-xs font-medium text-neutral-500 uppercase tracking-wider">
+                        {baseCcy?.name} ({base})
+                      </th>
+                      <th className="px-4 py-2.5 text-right text-xs font-medium text-neutral-500 uppercase tracking-wider">
+                        {targetCcy?.name} ({target})
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
+                    {commonAmounts.map((amt) => (
+                      <tr key={amt} className="hover:bg-neutral-50/50 dark:hover:bg-neutral-900/30 transition-colors">
+                        <td className="px-4 py-2.5 font-medium tabular-nums">
+                          {amt.toLocaleString()} {base}
+                        </td>
+                        <td className="px-4 py-2.5 text-right tabular-nums text-neutral-600 dark:text-neutral-400">
+                          {(amt * rate).toFixed(4)} {target}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
           {/* Historical Sparkline */}
           <SparklineChartWrapper
             data7d={history7d}
@@ -204,21 +242,34 @@ async function CurrencyPairPage({ base, target }: { base: string; target: string
           {/* SEO Content */}
           <div className="mt-10 space-y-4 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
-              About {baseCcy?.name} to {targetCcy?.name}
+              {baseCcy?.name} to {targetCcy?.name} Exchange Rate
             </h2>
             <p>
-              The {baseCcy?.name} ({base}) to {targetCcy?.name} ({target}) exchange rate
-              represents how much one {baseCcy?.name} is worth in {targetCcy?.name}.
-              This pair is among the most traded currency pairs globally, used by
-              international businesses, travelers, and investors.
+              The live {base} to {target} exchange rate shows how much one{' '}
+              {baseCcy?.name} ({base}) is worth in {targetCcy?.name} ({target}).
+              {rate && (
+                <> As of today, <strong>1 {base} = {rate.toFixed(6)} {target}</strong>.</>
+              )}{' '}
+              This pair is actively traded by international businesses, travelers, and
+              investors seeking exposure to these two currencies.
             </p>
             <p>
-              {baseCcy?.flag} The {baseCcy?.name} (symbol: {baseCcy?.symbol}) is the official
-              currency of the United States and the worlds primary reserve currency.
+              {baseCcy?.flag} The <strong>{baseCcy?.name} ({base})</strong> (symbol:{' '}
+              {baseCcy?.symbol}) is the official currency used in regions that accept it.
+              {base === 'USD' && " As the world's primary reserve currency, it plays a central role in global trade and finance."}
+              {base === 'EUR' && ' As the single currency of the Eurozone, it serves 20 EU member states and over 340 million citizens.'}
+              {base === 'GBP' && ' As the oldest continuously used currency, the British Pound remains a major global reserve currency.'}
+              {base === 'JPY' && ' The Japanese Yen is one of the most traded currencies in Asia and a key safe-haven asset.'}
+              {base === 'CNY' && ' The Chinese Yuan (Renminbi) is increasingly used in international trade and is a component of the IMF SDR basket.'}
             </p>
             <p>
-              {targetCcy?.flag} The {targetCcy?.name} (symbol: {targetCcy?.symbol}) is the
-              official currency used in regions that accept it.
+              {targetCcy?.flag} The <strong>{targetCcy?.name} ({target})</strong> (symbol:{' '}
+              {targetCcy?.symbol}) is the official currency used in regions that accept it.
+              {target === 'USD' && " As the world's primary reserve currency, it plays a central role in global trade and finance."}
+              {target === 'EUR' && ' As the single currency of the Eurozone, it serves 20 EU member states and over 340 million citizens.'}
+              {target === 'GBP' && ' As the oldest continuously used currency, the British Pound remains a major global reserve currency.'}
+              {target === 'JPY' && ' The Japanese Yen is one of the most traded currencies in Asia and a key safe-haven asset.'}
+              {target === 'CNY' && ' The Chinese Yuan (Renminbi) is increasingly used in international trade and is a component of the IMF SDR basket.'}
             </p>
           </div>
 
@@ -315,7 +366,7 @@ async function CurrencyPage({ code }: { code: string }) {
           <div className="mt-10">
             <h2 className="text-lg font-semibold mb-4">Popular {code} Exchange Rates</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              {TOP_PAIRS.filter(
+              {ALL_PAIRS.filter(
                 (p) => p.base === code || p.target === code
               ).slice(0, 12).map((pair) => {
                 const relatedCode = pair.base === code ? pair.target : pair.base;
