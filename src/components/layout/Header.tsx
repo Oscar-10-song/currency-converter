@@ -7,6 +7,9 @@ import { ThemeToggle } from './ThemeToggle';
 export function Header() {
   const pathname = usePathname();
 
+  // Hide header on widget pages (used for iframe embedding)
+  if (pathname.startsWith('/widget')) return null;
+
   const isActive = (path: string) => pathname === path;
 
   const navLinks = [

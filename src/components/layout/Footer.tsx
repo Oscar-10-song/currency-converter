@@ -1,3 +1,6 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { FooterAd } from '@/components/ads/AdPlacements';
 
@@ -26,6 +29,11 @@ const footerLinks = [
 ];
 
 export function Footer() {
+  const pathname = usePathname();
+
+  // Hide footer on widget pages (used for iframe embedding)
+  if (pathname.startsWith('/widget')) return null;
+
   return (
     <footer className="border-t border-neutral-200/60 dark:border-neutral-800 bg-white dark:bg-neutral-950">
       <FooterAd />

@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   // Enable React strict mode for development
   reactStrictMode: true,
 
-  // Security headers
+  // Security + performance headers
   async headers() {
     return [
       {
@@ -25,6 +25,36 @@ const nextConfig: NextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
+          },
+        ],
+      },
+      // Cache static assets aggressively
+      {
+        source: '/:path*(\\.(?:svg|png|jpg|webp|ico|woff2|ttf))',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      // Allow embedding on any site (widget iframe)
+      {
+        source: '/widget(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors *",
+          },
+        ],
+      },
+      // Remove X-Frame-Options for widget (CSP takes over)
+      {
+        source: '/widget(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: '',
           },
         ],
       },
