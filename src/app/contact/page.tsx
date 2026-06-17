@@ -95,7 +95,7 @@ export default function ContactPage() {
           <div className="mt-10 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-100 dark:border-neutral-800">
             <h2 className="text-sm font-semibold mb-2">Other ways to reach us</h2>
             <p className="text-sm text-neutral-500 dark:text-neutral-400">
-              Email: contact@currencyhub.me
+              Email: ttkx1010@gmail.com
             </p>
           </div>
         </div>

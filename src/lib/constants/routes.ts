@@ -21,7 +21,7 @@ export const SITE_CONFIG = {
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.currencyhub.me',
   locale: 'en-US',
   defaultCurrency: 'USD',
-  email: 'contact@currencyhub.me',
+  email: 'ttkx1010@gmail.com',
   social: {
     twitter: '@currencyhub',
   },
