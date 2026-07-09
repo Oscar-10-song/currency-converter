@@ -86,9 +86,22 @@ export function Footer() {
           <p className="text-xs text-neutral-400 dark:text-neutral-500">
             &copy; {new Date().getFullYear()} CurrencyHub. All rights reserved.
           </p>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500">
-            Exchange rates are for reference only. Check with your financial institution for actual rates.
-          </p>
+          <div className="flex items-center gap-4">
+            {/* tools.cafe directory badge — required for listing verification */}
+            <a
+              href="https://tools.cafe"
+              target="_blank"
+              rel="noopener"
+              title="Featured on Tools.cafe"
+              className="inline-flex items-center gap-1.5 rounded-md border border-neutral-200 dark:border-neutral-700 px-2.5 py-1.5 text-xs font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-300 dark:hover:border-neutral-600 transition-colors"
+            >
+              <span aria-hidden="true">☕</span>
+              Featured on Tools.cafe
+            </a>
+            <p className="text-xs text-neutral-400 dark:text-neutral-500">
+              Exchange rates are for reference only. Check with your financial institution for actual rates.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
